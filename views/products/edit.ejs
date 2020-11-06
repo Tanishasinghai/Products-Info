@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Product</title>
+    </head>
+    <body>
+        <h1>Edit Product</h1>
+        <form action='/products/<%=product._id%>?_method=PUT' method='POST'>
+            <label for='name'><b>Product Name</b></label>
+             <input id='name' type='text' name='name' placeholder='Product name' value='<%= product.name %>' >
+             <br>
+             <br>
+             <label for='price'><b>Product Price(Unit)</b></label>
+             <input id='price' type='number' name='price' placeholder='Product Price' value='<%=product.price %>'>
+             <br>
+             <br>
+             <label for='category'><b>Select Product Category</b></label>
+             <select id='category' name='category'>
+                 <option value='fruit' <%=product.category==='fruit'?'selected':' '%>>fruit</option>
+                 <option value='vegetable' <%=product.category==='vegetable'?'selected':' '%>>vegetable</option>
+                 <option value='dairy' <%=product.category==='dairy'?'selected':' '%>>dairy</option>
+             </select>
+             <button>Save</button>
+        </form>
+        <a href='/products/<%=product._id%>'>Cancel</a>
+    </body>
+</html>

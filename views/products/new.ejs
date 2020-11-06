@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Product</title>
+    </head>
+    <body>
+        <h1>Add a Product</h1>
+        <form action='/products' method='POST'>
+            <label for='name'><b>Product Name</b></label>
+             <input id='name' type='text' name='name' placeholder='Product name'>
+             <br>
+             <br>
+             <label for='price'><b>Product Price(Unit)</b></label>
+             <input id='price' type='number' name='price' placeholder='Product Price'>
+             <br>
+             <br>
+             <label for='category'><b>Select Product Category</b></label>
+             <select id='category' name='category'>
+                <option value='fruit'>fruit</option>
+                 <option value='vegetable'>vegetable</option>
+                 <option value='dairy'>dairy</option>
+             </select>
+             <button>Save</button>
+        </form>
+    </body>
+</html>
